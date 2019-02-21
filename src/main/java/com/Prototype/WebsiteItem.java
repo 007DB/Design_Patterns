@@ -1,9 +1,17 @@
 package com.Prototype;
 
-public abstract class WebsiteItem {
+public abstract class WebsiteItem implements Cloneable {
     private String name ;
     private  String url;
     private String price;
+
+
+    @Override
+    protected  Object clone() throws CloneNotSupportedException{
+        return super.clone();
+    }
+
+
 
     public String getName() {
         return name;
@@ -28,7 +36,6 @@ public abstract class WebsiteItem {
     public void setPrice(String price) {
         this.price = price;
     }
-
 
 
 }

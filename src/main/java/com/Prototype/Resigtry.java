@@ -10,8 +10,23 @@ public class Resigtry {
     private Map<String,WebsiteItem> items = new HashMap<String, WebsiteItem>();
 
     public Resigtry(){
+        /*creating items in the load method put it in a registry whch gives us a movie */
+
         loadItems();
     }
+
+    public WebsiteItem createItem(String type){
+        WebsiteItem websiteItem= null;
+
+        try {
+            websiteItem = (WebsiteItem) (items.get(type)).clone();
+
+        } catch (CloneNotSupportedException e){
+            e.printStackTrace();
+        }
+        return websiteItem;
+    }
+
 
 
     private void loadItems() {
@@ -27,9 +42,8 @@ public class Resigtry {
     book.setPrice("$3.00");
         items.put("Book", book);
 
+        }
 
-
-    }
 
 
 
