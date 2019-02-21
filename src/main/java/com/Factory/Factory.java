@@ -2,10 +2,12 @@ package com.Factory;
 
 
 public class Factory {
-    public  static Website getWebsite(String siteType) {
-        if ("blog".equals(siteType)) {
+
+
+    public  static Website getWebsite(WebsiteChoice siteType) {
+        if ( WebsiteChoice.BLOG.equals(siteType)) {
             return new Blog();
-        } else if ("shop".equals(siteType)) {
+        } else if (WebsiteChoice.SHOP.equals(siteType)) {
             return new Shop();
         } else {
             return null;
