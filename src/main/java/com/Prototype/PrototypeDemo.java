@@ -5,7 +5,7 @@ public class PrototypeDemo {
         Resigtry reg = new Resigtry();
         Movies movie = (Movies) reg.createItem("Movie");
 
-        movie.setName("Destiny Book");
+        movie.setName("Destiny movie");
 
         System.out.println("");
         System.out.println(movie.getName());
@@ -15,7 +15,13 @@ public class PrototypeDemo {
       Movies anotherMovie = ( Movies) reg.createItem("Movie");
       anotherMovie.setName("Kasper the friendly Ghost ");
       System.out.println(anotherMovie.getName());
-      
+
+      Book book = (Book) reg.createItem("Book");
+
+      book.setName("Destiny Book");
+      book.setNumberofPages(400000);
+System.out.println(book.getName());
+      System.out.println(book.getNumberofPages());
 
 
 
